@@ -19,6 +19,7 @@
 		05A3AE0D1678779800ABA5F2 /* RTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A3AE0C1678779800ABA5F2 /* RTViewController.m */; };
 		05A3AE101678779800ABA5F2 /* RTViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05A3AE0E1678779800ABA5F2 /* RTViewController_iPhone.xib */; };
 		05A3AE131678779800ABA5F2 /* RTViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05A3AE111678779800ABA5F2 /* RTViewController_iPad.xib */; };
+		05A3AE1F16787B6500ABA5F2 /* rt.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 05A3AE1E16787B6400ABA5F2 /* rt.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		05A3AE0C1678779800ABA5F2 /* RTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RTViewController.m; sourceTree = "<group>"; };
 		05A3AE0F1678779800ABA5F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RTViewController_iPhone.xib; sourceTree = "<group>"; };
 		05A3AE121678779800ABA5F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RTViewController_iPad.xib; sourceTree = "<group>"; };
+		05A3AE1E16787B6400ABA5F2 /* rt.sqlite */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rt.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		05A3ADF91678779800ABA5F2 /* iOSTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				05A3AE1D16787B6400ABA5F2 /* Database */,
 				05A3AE1B1678785100ABA5F2 /* Views */,
 				05A3AE1A1678784A00ABA5F2 /* Services */,
 				05A3AE191678782700ABA5F2 /* Models */,
@@ -140,6 +143,14 @@
 			children = (
 			);
 			name = Account;
+			sourceTree = "<group>";
+		};
+		05A3AE1D16787B6400ABA5F2 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				05A3AE1E16787B6400ABA5F2 /* rt.sqlite */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +211,7 @@
 				05A3AE0A1678779800ABA5F2 /* Default-568h@2x.png in Resources */,
 				05A3AE101678779800ABA5F2 /* RTViewController_iPhone.xib in Resources */,
 				05A3AE131678779800ABA5F2 /* RTViewController_iPad.xib in Resources */,
+				05A3AE1F16787B6500ABA5F2 /* rt.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,7 +342,7 @@
 				05A3AE151678779800ABA5F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		05A3AE161678779800ABA5F2 /* Build configuration list for PBXNativeTarget "iOSTemplate" */ = {
 			isa = XCConfigurationList;
@@ -339,6 +351,7 @@
 				05A3AE181678779800ABA5F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
