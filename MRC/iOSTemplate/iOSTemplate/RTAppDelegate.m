@@ -1,25 +1,32 @@
 //
-//  AppDelegate.m
+//  RTAppDelegate.m
 //  iOSTemplate
 //
 //  Created by  rtsafe02 on 12-12-12.
 //  Copyright (c) 2012年 TelSafe. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "RTAppDelegate.h"
 
-#import "ViewController.h"
+#import "RTViewController.h"
 
-@implementation AppDelegate
+@implementation RTAppDelegate
+
+- (void)dealloc
+{
+  [_window release];
+  [_viewController release];
+    [super dealloc];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
   if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-      self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPhone" bundle:nil];
+      self.viewController = [[[RTViewController alloc] initWithNibName:@"RTViewController_iPhone" bundle:nil] autorelease];
   } else {
-      self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPad" bundle:nil];
+      self.viewController = [[[RTViewController alloc] initWithNibName:@"RTViewController_iPad" bundle:nil] autorelease];
   }
   self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];

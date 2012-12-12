@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  RTAppDelegate.h
 //  iOSTemplate
 //
 //  Created by  rtsafe02 on 12-12-12.
@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class ViewController;
+@class RTViewController;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface RTAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) ViewController *viewController;
+@property (strong, nonatomic) RTViewController *viewController;
 
 @end

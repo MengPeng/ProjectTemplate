@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RTViewController.h
 //  iOSTemplate
 //
 //  Created by  rtsafe02 on 12-12-12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface RTViewController : UIViewController
 
 @end

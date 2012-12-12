@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  RTViewController.m
 //  iOSTemplate
 //
 //  Created by  rtsafe02 on 12-12-12.
 //  Copyright (c) 2012年 TelSafe. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "RTViewController.h"
 
-@interface ViewController ()
+@interface RTViewController ()
 
 @end
 
-@implementation ViewController
+@implementation RTViewController
 
 - (void)viewDidLoad
 {
