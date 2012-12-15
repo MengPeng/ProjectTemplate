@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0523F85C167ACDA9001D83AB /* Plist.m in Sources */ = {isa = PBXBuildFile; fileRef = 0523F851167ACDA9001D83AB /* Plist.m */; };
-		0523F85D167ACDA9001D83AB /* DatabaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0523F854167ACDA9001D83AB /* DatabaseHelper.m */; };
-		0523F85F167ACDA9001D83AB /* HttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0523F859167ACDA9001D83AB /* HttpHelper.m */; };
-		0523F860167ACDA9001D83AB /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0523F85B167ACDA9001D83AB /* Reachability.m */; };
 		0523F863167AD02D001D83AB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0523F862167AD02D001D83AB /* CFNetwork.framework */; };
 		0523F869167AD0AE001D83AB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0523F868167AD0AE001D83AB /* SystemConfiguration.framework */; };
 		0523F86B167AD0C6001D83AB /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0523F86A167AD0C6001D83AB /* libsqlite3.0.dylib */; };
 		0523F86E167AD162001D83AB /* RTSynchronousService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0523F86D167AD162001D83AB /* RTSynchronousService.m */; };
+		05606E03167CA6300034AAAD /* HttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 05606E00167CA5FE0034AAAD /* HttpHelper.m */; };
+		05606E04167CA6370034AAAD /* DatabaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 05606DFD167CA5FE0034AAAD /* DatabaseHelper.m */; };
+		05606E05167CA6590034AAAD /* Plist.m in Sources */ = {isa = PBXBuildFile; fileRef = 05606DFA167CA5FE0034AAAD /* Plist.m */; };
+		05606E06167CA6610034AAAD /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 05606E02167CA5FE0034AAAD /* Reachability.m */; };
 		058F80F916796B6C000774A7 /* RTAccountServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 058F80F816796B6C000774A7 /* RTAccountServices.m */; };
 		058F8104167978BD000774A7 /* RTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 058F8103167978BD000774A7 /* RTLoginViewController.m */; };
 		058F8106167978DF000774A7 /* RTLoginView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 058F8105167978DF000774A7 /* RTLoginView_iPad.xib */; };
@@ -39,19 +39,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0523F850167ACDA9001D83AB /* Plist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plist.h; sourceTree = "<group>"; };
-		0523F851167ACDA9001D83AB /* Plist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plist.m; sourceTree = "<group>"; };
-		0523F853167ACDA9001D83AB /* DatabaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseHelper.h; sourceTree = "<group>"; };
-		0523F854167ACDA9001D83AB /* DatabaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseHelper.m; sourceTree = "<group>"; };
-		0523F858167ACDA9001D83AB /* HttpHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpHelper.h; sourceTree = "<group>"; };
-		0523F859167ACDA9001D83AB /* HttpHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpHelper.m; sourceTree = "<group>"; };
-		0523F85A167ACDA9001D83AB /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		0523F85B167ACDA9001D83AB /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		0523F862167AD02D001D83AB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		0523F868167AD0AE001D83AB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0523F86A167AD0C6001D83AB /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		0523F86C167AD162001D83AB /* RTSynchronousService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTSynchronousService.h; path = Services/RTSynchronousService.h; sourceTree = "<group>"; };
 		0523F86D167AD162001D83AB /* RTSynchronousService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTSynchronousService.m; path = Services/RTSynchronousService.m; sourceTree = "<group>"; };
+		05606DF9167CA5FE0034AAAD /* Plist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Plist.h; sourceTree = "<group>"; };
+		05606DFA167CA5FE0034AAAD /* Plist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Plist.m; sourceTree = "<group>"; };
+		05606DFC167CA5FE0034AAAD /* DatabaseHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatabaseHelper.h; sourceTree = "<group>"; };
+		05606DFD167CA5FE0034AAAD /* DatabaseHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatabaseHelper.m; sourceTree = "<group>"; };
+		05606DFF167CA5FE0034AAAD /* HttpHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpHelper.h; sourceTree = "<group>"; };
+		05606E00167CA5FE0034AAAD /* HttpHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpHelper.m; sourceTree = "<group>"; };
+		05606E01167CA5FE0034AAAD /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		05606E02167CA5FE0034AAAD /* Reachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		058F80F716796B6C000774A7 /* RTAccountServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTAccountServices.h; path = Services/RTAccountServices.h; sourceTree = "<group>"; };
 		058F80F816796B6C000774A7 /* RTAccountServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTAccountServices.m; path = Services/RTAccountServices.m; sourceTree = "<group>"; };
 		058F8102167978BD000774A7 /* RTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTLoginViewController.h; path = Views/Account/RTLoginViewController.h; sourceTree = "<group>"; };
@@ -103,41 +103,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0523F84E167ACDA9001D83AB /* CoreCode */ = {
+		05606DF7167CA5FE0034AAAD /* CoreCode */ = {
 			isa = PBXGroup;
 			children = (
-				0523F84F167ACDA9001D83AB /* Configuration */,
-				0523F852167ACDA9001D83AB /* DataBase */,
-				0523F855167ACDA9001D83AB /* Net */,
+				05606DF8167CA5FE0034AAAD /* Configuration */,
+				05606DFB167CA5FE0034AAAD /* DataBase */,
+				05606DFE167CA5FE0034AAAD /* Net */,
 			);
-			path = CoreCode;
+			name = CoreCode;
+			path = ../CoreCode;
 			sourceTree = "<group>";
 		};
-		0523F84F167ACDA9001D83AB /* Configuration */ = {
+		05606DF8167CA5FE0034AAAD /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				0523F850167ACDA9001D83AB /* Plist.h */,
-				0523F851167ACDA9001D83AB /* Plist.m */,
+				05606DF9167CA5FE0034AAAD /* Plist.h */,
+				05606DFA167CA5FE0034AAAD /* Plist.m */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
 		};
-		0523F852167ACDA9001D83AB /* DataBase */ = {
+		05606DFB167CA5FE0034AAAD /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
-				0523F853167ACDA9001D83AB /* DatabaseHelper.h */,
-				0523F854167ACDA9001D83AB /* DatabaseHelper.m */,
+				05606DFC167CA5FE0034AAAD /* DatabaseHelper.h */,
+				05606DFD167CA5FE0034AAAD /* DatabaseHelper.m */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
 		};
-		0523F855167ACDA9001D83AB /* Net */ = {
+		05606DFE167CA5FE0034AAAD /* Net */ = {
 			isa = PBXGroup;
 			children = (
-				0523F858167ACDA9001D83AB /* HttpHelper.h */,
-				0523F859167ACDA9001D83AB /* HttpHelper.m */,
-				0523F85A167ACDA9001D83AB /* Reachability.h */,
-				0523F85B167ACDA9001D83AB /* Reachability.m */,
+				05606DFF167CA5FE0034AAAD /* HttpHelper.h */,
+				05606E00167CA5FE0034AAAD /* HttpHelper.m */,
+				05606E01167CA5FE0034AAAD /* Reachability.h */,
+				05606E02167CA5FE0034AAAD /* Reachability.m */,
 			);
 			path = Net;
 			sourceTree = "<group>";
@@ -145,7 +146,7 @@
 		05A3ADE41678779800ABA5F2 = {
 			isa = PBXGroup;
 			children = (
-				0523F84E167ACDA9001D83AB /* CoreCode */,
+				05606DF7167CA5FE0034AAAD /* CoreCode */,
 				05A3ADF91678779800ABA5F2 /* iOSTemplate */,
 				05A3ADF21678779800ABA5F2 /* Frameworks */,
 				05A3ADF01678779800ABA5F2 /* Products */,
@@ -329,6 +330,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05606E04167CA6370034AAAD /* DatabaseHelper.m in Sources */,
+				05606E06167CA6610034AAAD /* Reachability.m in Sources */,
+				05606E05167CA6590034AAAD /* Plist.m in Sources */,
+				05606E03167CA6300034AAAD /* HttpHelper.m in Sources */,
 				05A3AE001678779800ABA5F2 /* main.m in Sources */,
 				05A3AE041678779800ABA5F2 /* RTAppDelegate.m in Sources */,
 				05A3AE0D1678779800ABA5F2 /* RTViewController.m in Sources */,
@@ -338,10 +343,6 @@
 				058F811B1679803C000774A7 /* UserModel.m in Sources */,
 				058F811C1679803C000774A7 /* userroleModel.m in Sources */,
 				058F812116799CE5000774A7 /* RTPopLoginView.m in Sources */,
-				0523F85C167ACDA9001D83AB /* Plist.m in Sources */,
-				0523F85D167ACDA9001D83AB /* DatabaseHelper.m in Sources */,
-				0523F85F167ACDA9001D83AB /* HttpHelper.m in Sources */,
-				0523F860167ACDA9001D83AB /* Reachability.m in Sources */,
 				0523F86E167AD162001D83AB /* RTSynchronousService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,6 +388,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -398,10 +400,15 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "../CoreCode/**";
+				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = "../CoreCode/**";
 				ONLY_ACTIVE_ARCH = YES;
+				REZ_SEARCH_PATHS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -416,14 +423,20 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "../CoreCode/**";
+				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = "../CoreCode/**";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				REZ_SEARCH_PATHS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -431,9 +444,13 @@
 		05A3AE171678779800ABA5F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOSTemplate/iOSTemplate-Prefix.pch";
+				HEADER_SEARCH_PATHS = "../CoreCode/**";
 				INFOPLIST_FILE = "iOSTemplate/iOSTemplate-Info.plist";
+				LIBRARY_SEARCH_PATHS = "../CoreCode/**";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -442,9 +459,13 @@
 		05A3AE181678779800ABA5F2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOSTemplate/iOSTemplate-Prefix.pch";
+				HEADER_SEARCH_PATHS = "../CoreCode/**";
 				INFOPLIST_FILE = "iOSTemplate/iOSTemplate-Info.plist";
+				LIBRARY_SEARCH_PATHS = "../CoreCode/**";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
