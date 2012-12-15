@@ -7,13 +7,18 @@
 //
 
 #import "RTAccountServices.h"
+#import "UserModel.h"
 
 @implementation RTAccountServices
 
 -(int)login:(NSString *)userCode Password:(NSString *)password Encode:(enum PasswordEncode) encode
 {
-  NSLog(@"%d",encode);
-  return TRUE;
+  UserModel *um = [[UserModel alloc] init];
+  um.code = @"mp";
+  um.password = @"123";
+  
+  //这里加入访问USER表的代码，用来验证用户名口令
+  return [um.code isEqualToString:userCode] && [um.password isEqualToString:password];
 }
 
 @end

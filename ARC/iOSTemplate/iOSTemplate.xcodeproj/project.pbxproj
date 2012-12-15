@@ -7,7 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0523F85C167ACDA9001D83AB /* Plist.m in Sources */ = {isa = PBXBuildFile; fileRef = 0523F851167ACDA9001D83AB /* Plist.m */; };
+		0523F85D167ACDA9001D83AB /* DatabaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0523F854167ACDA9001D83AB /* DatabaseHelper.m */; };
+		0523F85F167ACDA9001D83AB /* HttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0523F859167ACDA9001D83AB /* HttpHelper.m */; };
+		0523F860167ACDA9001D83AB /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0523F85B167ACDA9001D83AB /* Reachability.m */; };
+		0523F863167AD02D001D83AB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0523F862167AD02D001D83AB /* CFNetwork.framework */; };
+		0523F869167AD0AE001D83AB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0523F868167AD0AE001D83AB /* SystemConfiguration.framework */; };
+		0523F86B167AD0C6001D83AB /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0523F86A167AD0C6001D83AB /* libsqlite3.0.dylib */; };
+		0523F86E167AD162001D83AB /* RTSynchronousService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0523F86D167AD162001D83AB /* RTSynchronousService.m */; };
 		058F80F916796B6C000774A7 /* RTAccountServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 058F80F816796B6C000774A7 /* RTAccountServices.m */; };
+		058F8104167978BD000774A7 /* RTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 058F8103167978BD000774A7 /* RTLoginViewController.m */; };
+		058F8106167978DF000774A7 /* RTLoginView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 058F8105167978DF000774A7 /* RTLoginView_iPad.xib */; };
+		058F8108167978FE000774A7 /* RTLoginView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 058F8107167978FE000774A7 /* RTLoginView_iPhone.xib */; };
+		058F81191679803C000774A7 /* roleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 058F810E1679803C000774A7 /* roleModel.m */; };
+		058F811B1679803C000774A7 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 058F81121679803C000774A7 /* UserModel.m */; };
+		058F811C1679803C000774A7 /* userroleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 058F81141679803C000774A7 /* userroleModel.m */; };
+		058F812116799CE5000774A7 /* RTPopLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 058F812016799CE5000774A7 /* RTPopLoginView.m */; };
 		05A3ADF41678779800ABA5F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A3ADF31678779800ABA5F2 /* UIKit.framework */; };
 		05A3ADF61678779800ABA5F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A3ADF51678779800ABA5F2 /* Foundation.framework */; };
 		05A3ADF81678779800ABA5F2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A3ADF71678779800ABA5F2 /* CoreGraphics.framework */; };
@@ -24,8 +39,33 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0523F850167ACDA9001D83AB /* Plist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plist.h; sourceTree = "<group>"; };
+		0523F851167ACDA9001D83AB /* Plist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plist.m; sourceTree = "<group>"; };
+		0523F853167ACDA9001D83AB /* DatabaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseHelper.h; sourceTree = "<group>"; };
+		0523F854167ACDA9001D83AB /* DatabaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseHelper.m; sourceTree = "<group>"; };
+		0523F858167ACDA9001D83AB /* HttpHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpHelper.h; sourceTree = "<group>"; };
+		0523F859167ACDA9001D83AB /* HttpHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpHelper.m; sourceTree = "<group>"; };
+		0523F85A167ACDA9001D83AB /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		0523F85B167ACDA9001D83AB /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		0523F862167AD02D001D83AB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		0523F868167AD0AE001D83AB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0523F86A167AD0C6001D83AB /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		0523F86C167AD162001D83AB /* RTSynchronousService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTSynchronousService.h; path = Services/RTSynchronousService.h; sourceTree = "<group>"; };
+		0523F86D167AD162001D83AB /* RTSynchronousService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTSynchronousService.m; path = Services/RTSynchronousService.m; sourceTree = "<group>"; };
 		058F80F716796B6C000774A7 /* RTAccountServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTAccountServices.h; path = Services/RTAccountServices.h; sourceTree = "<group>"; };
 		058F80F816796B6C000774A7 /* RTAccountServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTAccountServices.m; path = Services/RTAccountServices.m; sourceTree = "<group>"; };
+		058F8102167978BD000774A7 /* RTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTLoginViewController.h; path = Views/Account/RTLoginViewController.h; sourceTree = "<group>"; };
+		058F8103167978BD000774A7 /* RTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTLoginViewController.m; path = Views/Account/RTLoginViewController.m; sourceTree = "<group>"; };
+		058F8105167978DF000774A7 /* RTLoginView_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RTLoginView_iPad.xib; path = Views/Account/RTLoginView_iPad.xib; sourceTree = "<group>"; };
+		058F8107167978FE000774A7 /* RTLoginView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RTLoginView_iPhone.xib; path = Views/Account/RTLoginView_iPhone.xib; sourceTree = "<group>"; };
+		058F810D1679803C000774A7 /* roleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = roleModel.h; path = Models/Account/roleModel.h; sourceTree = "<group>"; };
+		058F810E1679803C000774A7 /* roleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = roleModel.m; path = Models/Account/roleModel.m; sourceTree = "<group>"; };
+		058F81111679803C000774A7 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserModel.h; path = Models/Account/UserModel.h; sourceTree = "<group>"; };
+		058F81121679803C000774A7 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserModel.m; path = Models/Account/UserModel.m; sourceTree = "<group>"; };
+		058F81131679803C000774A7 /* userroleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = userroleModel.h; path = Models/Account/userroleModel.h; sourceTree = "<group>"; };
+		058F81141679803C000774A7 /* userroleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = userroleModel.m; path = Models/Account/userroleModel.m; sourceTree = "<group>"; };
+		058F811F16799CE5000774A7 /* RTPopLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTPopLoginView.h; path = Views/Account/RTPopLoginView.h; sourceTree = "<group>"; };
+		058F812016799CE5000774A7 /* RTPopLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTPopLoginView.m; path = Views/Account/RTPopLoginView.m; sourceTree = "<group>"; };
 		05A3ADEF1678779800ABA5F2 /* iOSTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05A3ADF31678779800ABA5F2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		05A3ADF51678779800ABA5F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -51,6 +91,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0523F86B167AD0C6001D83AB /* libsqlite3.0.dylib in Frameworks */,
+				0523F869167AD0AE001D83AB /* SystemConfiguration.framework in Frameworks */,
+				0523F863167AD02D001D83AB /* CFNetwork.framework in Frameworks */,
 				05A3ADF41678779800ABA5F2 /* UIKit.framework in Frameworks */,
 				05A3ADF61678779800ABA5F2 /* Foundation.framework in Frameworks */,
 				05A3ADF81678779800ABA5F2 /* CoreGraphics.framework in Frameworks */,
@@ -60,9 +103,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0523F84E167ACDA9001D83AB /* CoreCode */ = {
+			isa = PBXGroup;
+			children = (
+				0523F84F167ACDA9001D83AB /* Configuration */,
+				0523F852167ACDA9001D83AB /* DataBase */,
+				0523F855167ACDA9001D83AB /* Net */,
+			);
+			path = CoreCode;
+			sourceTree = "<group>";
+		};
+		0523F84F167ACDA9001D83AB /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				0523F850167ACDA9001D83AB /* Plist.h */,
+				0523F851167ACDA9001D83AB /* Plist.m */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		0523F852167ACDA9001D83AB /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				0523F853167ACDA9001D83AB /* DatabaseHelper.h */,
+				0523F854167ACDA9001D83AB /* DatabaseHelper.m */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		0523F855167ACDA9001D83AB /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				0523F858167ACDA9001D83AB /* HttpHelper.h */,
+				0523F859167ACDA9001D83AB /* HttpHelper.m */,
+				0523F85A167ACDA9001D83AB /* Reachability.h */,
+				0523F85B167ACDA9001D83AB /* Reachability.m */,
+			);
+			path = Net;
+			sourceTree = "<group>";
+		};
 		05A3ADE41678779800ABA5F2 = {
 			isa = PBXGroup;
 			children = (
+				0523F84E167ACDA9001D83AB /* CoreCode */,
 				05A3ADF91678779800ABA5F2 /* iOSTemplate */,
 				05A3ADF21678779800ABA5F2 /* Frameworks */,
 				05A3ADF01678779800ABA5F2 /* Products */,
@@ -80,6 +163,9 @@
 		05A3ADF21678779800ABA5F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0523F86A167AD0C6001D83AB /* libsqlite3.0.dylib */,
+				0523F868167AD0AE001D83AB /* SystemConfiguration.framework */,
+				0523F862167AD02D001D83AB /* CFNetwork.framework */,
 				05A3ADF31678779800ABA5F2 /* UIKit.framework */,
 				05A3ADF51678779800ABA5F2 /* Foundation.framework */,
 				05A3ADF71678779800ABA5F2 /* CoreGraphics.framework */,
@@ -122,6 +208,12 @@
 		05A3AE191678782700ABA5F2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				058F810D1679803C000774A7 /* roleModel.h */,
+				058F810E1679803C000774A7 /* roleModel.m */,
+				058F81111679803C000774A7 /* UserModel.h */,
+				058F81121679803C000774A7 /* UserModel.m */,
+				058F81131679803C000774A7 /* userroleModel.h */,
+				058F81141679803C000774A7 /* userroleModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -131,6 +223,8 @@
 			children = (
 				058F80F716796B6C000774A7 /* RTAccountServices.h */,
 				058F80F816796B6C000774A7 /* RTAccountServices.m */,
+				0523F86C167AD162001D83AB /* RTSynchronousService.h */,
+				0523F86D167AD162001D83AB /* RTSynchronousService.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -146,6 +240,12 @@
 		05A3AE1C1678785800ABA5F2 /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				058F8102167978BD000774A7 /* RTLoginViewController.h */,
+				058F8103167978BD000774A7 /* RTLoginViewController.m */,
+				058F8105167978DF000774A7 /* RTLoginView_iPad.xib */,
+				058F8107167978FE000774A7 /* RTLoginView_iPhone.xib */,
+				058F811F16799CE5000774A7 /* RTPopLoginView.h */,
+				058F812016799CE5000774A7 /* RTPopLoginView.m */,
 			);
 			name = Account;
 			sourceTree = "<group>";
@@ -217,6 +317,8 @@
 				05A3AE101678779800ABA5F2 /* RTViewController_iPhone.xib in Resources */,
 				05A3AE131678779800ABA5F2 /* RTViewController_iPad.xib in Resources */,
 				05A3AE1F16787B6500ABA5F2 /* rt.sqlite in Resources */,
+				058F8106167978DF000774A7 /* RTLoginView_iPad.xib in Resources */,
+				058F8108167978FE000774A7 /* RTLoginView_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +333,16 @@
 				05A3AE041678779800ABA5F2 /* RTAppDelegate.m in Sources */,
 				05A3AE0D1678779800ABA5F2 /* RTViewController.m in Sources */,
 				058F80F916796B6C000774A7 /* RTAccountServices.m in Sources */,
+				058F8104167978BD000774A7 /* RTLoginViewController.m in Sources */,
+				058F81191679803C000774A7 /* roleModel.m in Sources */,
+				058F811B1679803C000774A7 /* UserModel.m in Sources */,
+				058F811C1679803C000774A7 /* userroleModel.m in Sources */,
+				058F812116799CE5000774A7 /* RTPopLoginView.m in Sources */,
+				0523F85C167ACDA9001D83AB /* Plist.m in Sources */,
+				0523F85D167ACDA9001D83AB /* DatabaseHelper.m in Sources */,
+				0523F85F167ACDA9001D83AB /* HttpHelper.m in Sources */,
+				0523F860167ACDA9001D83AB /* Reachability.m in Sources */,
+				0523F86E167AD162001D83AB /* RTSynchronousService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

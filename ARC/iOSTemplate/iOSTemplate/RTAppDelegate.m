@@ -10,20 +10,46 @@
 
 #import "RTViewController.h"
 
+#import "RTLoginViewController.h"
+
 @implementation RTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-  if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-      self.viewController = [[RTViewController alloc] initWithNibName:@"RTViewController_iPhone" bundle:nil];
-  } else {
-      self.viewController = [[RTViewController alloc] initWithNibName:@"RTViewController_iPad" bundle:nil];
+  isLoginFirst=TRUE;
+  
+  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+  // Override point for customization after application launch.
+  self.navController = [[UINavigationController alloc] init];
+  self.navController.navigationBar.hidden=YES;
+  
+  //
+  if(isLoginFirst)
+  {
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+      
+      self.viewController = [[RTLoginViewController alloc] initWithNibName:@"RTLoginView_iPhone" bundle:nil
+        Success:^{
+          [self afterAuthenticationSuccess];
+        }
+        Fail:^{
+          NSLog(@"Login Fail");
+        }];
+      [self.navController pushViewController:self.viewController animated:YES];
+    } else {
+      
+      self.viewController = [[RTLoginViewController alloc] initWithNibName:@"RTLoginView_iPad" bundle:nil];
+      //self.viewController.loginDelegate=self;
+      [self.navController popToViewController:self.viewController animated:YES];
+    }
   }
-  self.window.rootViewController = self.viewController;
-    [self.window makeKeyAndVisible];
-    return YES;
+  else
+  {
+    [self afterAuthenticationSuccess];
+  }
+  self.window.rootViewController = self.navController;
+  [self.window makeKeyAndVisible];
+  return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -34,7 +60,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-  // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+  // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
   // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
@@ -53,4 +79,14 @@
   // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark -RTLoginViewDelegate
+-(void) afterAuthenticationSuccess
+{
+  NSLog(@"Lgoin SUCCESS");
+  //同步数据
+  //Sync();
+  RTSynchronousService *sync = [[RTSynchronousService alloc] initWithDatabaseName:@"rt.sqlite"];
+  [sync synchronousData];
+  //进入业务第一屏
+}
 @end

@@ -7,13 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RTLoginViewController.h"
+#import "RTSynchronousService.h"
 
 @class RTViewController;
 
 @interface RTAppDelegate : UIResponder <UIApplicationDelegate>
+{
+  BOOL isLoginFirst;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) RTViewController *viewController;
+@property (strong, nonatomic) RTLoginViewController *viewController;
+
+@property (strong, nonatomic) UINavigationController *navController;
 
 @end

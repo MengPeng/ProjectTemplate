@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "RTAccountServices.h"
+#import "RTLoginViewController.h"
 
 @interface RTViewController : UIViewController
 
