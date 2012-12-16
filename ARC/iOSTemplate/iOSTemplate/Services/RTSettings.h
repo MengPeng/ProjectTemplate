@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Plist.h"
 
-@interface RTSettingsService : NSObject
+@interface RTSettings : NSObject
 {
   
 }

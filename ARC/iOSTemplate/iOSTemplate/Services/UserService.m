@@ -5,7 +5,7 @@
   if(self){
     databaseHelper = [[DatabaseHelper alloc] init];
   }
-  RTSettingsService *settings = [[RTSettingsService alloc] init:@"Settings"];
+  RTSettings *settings = [[RTSettings alloc] init:@"Settings"];
   dbName = settings.databaseName;
   return self;
 }

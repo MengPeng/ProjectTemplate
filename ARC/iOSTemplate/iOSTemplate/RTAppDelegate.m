@@ -22,7 +22,7 @@
   self.navController = [[UINavigationController alloc] init];
   self.navController.navigationBar.hidden=YES;
   
-  RTSettingsService *settings = [[RTSettingsService alloc] init:@"Settings"];
+  RTSettings *settings = [[RTSettings alloc] init:@"Settings"];
   
   //
   if(settings.isLoginFirst)

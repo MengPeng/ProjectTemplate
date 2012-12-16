@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h> 
 #import "DatabaseHelper.h" 
 #import "UserModel.h" 
-#import "RTSettingsService.h" 
+#import "RTSettings.h" 
 @interface UserService : NSObject{ 
   DatabaseHelper *databaseHelper;
   NSString * dbName;

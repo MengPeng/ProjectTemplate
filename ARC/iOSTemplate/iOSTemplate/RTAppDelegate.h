@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RTLoginViewController.h"
 #import "RTSynchronousService.h"
-#import "RTSettingsService.h"
+#import "RTSettings.h"
 
 @class RTViewController;
 

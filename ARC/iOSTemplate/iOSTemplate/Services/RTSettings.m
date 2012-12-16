@@ -6,9 +6,9 @@
 //  Copyright (c) 2012年 TelSafe. All rights reserved.
 //
 
-#import "RTSettingsService.h"
+#import "RTSettings.h"
 
-@implementation RTSettingsService
+@implementation RTSettings
 {
   NSString * plistName;
   NSString * plistFullName;
