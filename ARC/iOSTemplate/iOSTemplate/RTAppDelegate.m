@@ -16,21 +16,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  isLoginFirst=TRUE;
   
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   // Override point for customization after application launch.
   self.navController = [[UINavigationController alloc] init];
   self.navController.navigationBar.hidden=YES;
   
+  RTSettingsService *settings = [[RTSettingsService alloc] init:@"Settings"];
+  
   //
-  if(isLoginFirst)
+  if(settings.isLoginFirst)
   {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
       
       self.viewController = [[RTLoginViewController alloc] initWithNibName:@"RTLoginView_iPhone" bundle:nil
         Success:^{
           [self afterAuthenticationSuccess];
+          NSLog(@"%@",[RTGlobal getInstance].currentUser.name);
         }
         Fail:^{
           NSLog(@"Login Fail");
@@ -85,8 +87,8 @@
   NSLog(@"Lgoin SUCCESS");
   //同步数据
   //Sync();
-  RTSynchronousService *sync = [[RTSynchronousService alloc] initWithDatabaseName:@"rt.sqlite"];
-  [sync synchronousData];
+  //RTSynchronousService *sync = [[RTSynchronousService alloc] initWithDatabaseName:@"rt.sqlite"];
+  //[sync synchronousData];
   //进入业务第一屏
 }
 @end

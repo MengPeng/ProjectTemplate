@@ -1,5 +1,5 @@
 //
-//  NSObject+Settings.h
+//  
 //  CivilizedConstruction
 //
 //  Created by  rtsafe02 on 12-8-22.
@@ -10,15 +10,10 @@
 
 @interface Plist:NSObject
 {
-//    NSString *plistPath;
-//    NSMutableDictionary *dictionary;
-}
-//-(id) initWithFileName:(NSString *)fileName;
-//-(NSString *)GetValue:(NSString *)SectionName;
-//-(NSString *) GetValueByPath:(NSString *)path;
-//-(void)SetValue:(NSString *)sectionValue SectionPath:(NSString *)sectionPath;
-//-(void)SetValue:(NSString *)sectionValue SectionName:(NSString *)sectionName;
 
-+(NSString *) GetValue:(NSString *)fileName Path:(NSString *)path;
-+(void)SetValue:(NSString *)fileName SectionPath:(NSString *)sectionPath SectionValue:(NSString *)sectionValue ;
+}
+
++(NSString *) getValue:(NSString *)fileName Path:(NSString *)path;
++(BOOL) getBoolValue:(NSString *)fileName Path:(NSString *)path;
++(void) setValue:(NSString *)fileName SectionPath:(NSString *)sectionPath SectionValue:(NSString *)sectionValue ;
 @end

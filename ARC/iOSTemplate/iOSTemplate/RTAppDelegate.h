@@ -9,12 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "RTLoginViewController.h"
 #import "RTSynchronousService.h"
+#import "RTSettingsService.h"
 
 @class RTViewController;
 
 @interface RTAppDelegate : UIResponder <UIApplicationDelegate>
 {
-  BOOL isLoginFirst;
+  NSString * UserCode;
+  NSString * UserName;
 }
 
 @property (strong, nonatomic) UIWindow *window;

@@ -11,6 +11,10 @@
 		0523F869167AD0AE001D83AB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0523F868167AD0AE001D83AB /* SystemConfiguration.framework */; };
 		0523F86B167AD0C6001D83AB /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0523F86A167AD0C6001D83AB /* libsqlite3.0.dylib */; };
 		0523F86E167AD162001D83AB /* RTSynchronousService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0523F86D167AD162001D83AB /* RTSynchronousService.m */; };
+		054B9B3A167DAE190039F09C /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 054B9B39167DAE190039F09C /* Settings.plist */; };
+		054B9B3E167DAE690039F09C /* RTSettingsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 054B9B3D167DAE690039F09C /* RTSettingsService.m */; };
+		054B9B48167DCEFB0039F09C /* RTGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = 054B9B47167DCEFB0039F09C /* RTGlobal.m */; };
+		054B9B4F167DD0620039F09C /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 054B9B4E167DD0620039F09C /* UserService.m */; };
 		05606E03167CA6300034AAAD /* HttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 05606E00167CA5FE0034AAAD /* HttpHelper.m */; };
 		05606E04167CA6370034AAAD /* DatabaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 05606DFD167CA5FE0034AAAD /* DatabaseHelper.m */; };
 		05606E05167CA6590034AAAD /* Plist.m in Sources */ = {isa = PBXBuildFile; fileRef = 05606DFA167CA5FE0034AAAD /* Plist.m */; };
@@ -44,6 +48,13 @@
 		0523F86A167AD0C6001D83AB /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		0523F86C167AD162001D83AB /* RTSynchronousService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTSynchronousService.h; path = Services/RTSynchronousService.h; sourceTree = "<group>"; };
 		0523F86D167AD162001D83AB /* RTSynchronousService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTSynchronousService.m; path = Services/RTSynchronousService.m; sourceTree = "<group>"; };
+		054B9B39167DAE190039F09C /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
+		054B9B3C167DAE690039F09C /* RTSettingsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTSettingsService.h; path = Services/RTSettingsService.h; sourceTree = "<group>"; };
+		054B9B3D167DAE690039F09C /* RTSettingsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTSettingsService.m; path = Services/RTSettingsService.m; sourceTree = "<group>"; };
+		054B9B46167DCEFB0039F09C /* RTGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTGlobal.h; path = Common/RTGlobal.h; sourceTree = "<group>"; };
+		054B9B47167DCEFB0039F09C /* RTGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTGlobal.m; path = Common/RTGlobal.m; sourceTree = "<group>"; };
+		054B9B4D167DD0620039F09C /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserService.h; path = Services/UserService.h; sourceTree = "<group>"; };
+		054B9B4E167DD0620039F09C /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserService.m; path = Services/UserService.m; sourceTree = "<group>"; };
 		05606DF9167CA5FE0034AAAD /* Plist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Plist.h; sourceTree = "<group>"; };
 		05606DFA167CA5FE0034AAAD /* Plist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Plist.m; sourceTree = "<group>"; };
 		05606DFC167CA5FE0034AAAD /* DatabaseHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatabaseHelper.h; sourceTree = "<group>"; };
@@ -177,6 +188,8 @@
 		05A3ADF91678779800ABA5F2 /* iOSTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				054B9B46167DCEFB0039F09C /* RTGlobal.h */,
+				054B9B47167DCEFB0039F09C /* RTGlobal.m */,
 				05A3AE1D16787B6400ABA5F2 /* Database */,
 				05A3AE1B1678785100ABA5F2 /* Views */,
 				05A3AE1A1678784A00ABA5F2 /* Services */,
@@ -188,6 +201,7 @@
 				05A3AE0E1678779800ABA5F2 /* RTViewController_iPhone.xib */,
 				05A3AE111678779800ABA5F2 /* RTViewController_iPad.xib */,
 				05A3ADFA1678779800ABA5F2 /* Supporting Files */,
+				054B9B39167DAE190039F09C /* Settings.plist */,
 			);
 			path = iOSTemplate;
 			sourceTree = "<group>";
@@ -222,10 +236,14 @@
 		05A3AE1A1678784A00ABA5F2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				054B9B4D167DD0620039F09C /* UserService.h */,
+				054B9B4E167DD0620039F09C /* UserService.m */,
 				058F80F716796B6C000774A7 /* RTAccountServices.h */,
 				058F80F816796B6C000774A7 /* RTAccountServices.m */,
 				0523F86C167AD162001D83AB /* RTSynchronousService.h */,
 				0523F86D167AD162001D83AB /* RTSynchronousService.m */,
+				054B9B3C167DAE690039F09C /* RTSettingsService.h */,
+				054B9B3D167DAE690039F09C /* RTSettingsService.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -320,6 +338,7 @@
 				05A3AE1F16787B6500ABA5F2 /* rt.sqlite in Resources */,
 				058F8106167978DF000774A7 /* RTLoginView_iPad.xib in Resources */,
 				058F8108167978FE000774A7 /* RTLoginView_iPhone.xib in Resources */,
+				054B9B3A167DAE190039F09C /* Settings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +363,9 @@
 				058F811C1679803C000774A7 /* userroleModel.m in Sources */,
 				058F812116799CE5000774A7 /* RTPopLoginView.m in Sources */,
 				0523F86E167AD162001D83AB /* RTSynchronousService.m in Sources */,
+				054B9B3E167DAE690039F09C /* RTSettingsService.m in Sources */,
+				054B9B48167DCEFB0039F09C /* RTGlobal.m in Sources */,
+				054B9B4F167DD0620039F09C /* UserService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

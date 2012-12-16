@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "RTAccountServices.h"
 #import "RTPopLoginView.h"
+#import "RTGlobal.h"
+#import "UserService.h"
+
 typedef void(^Block)(void);
 
 //@protocol RTLoginViewDelegate<NSObject>
