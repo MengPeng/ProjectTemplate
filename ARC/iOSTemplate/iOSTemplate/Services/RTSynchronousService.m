@@ -21,10 +21,18 @@
   return self;
 }
 
--(void) synchronousData
+-(void) synchronousDataFromWeb
 {
   //自行添加需要同步的函数
-  [self synchronousUserFromWeb:@"http://192.168.1.218:4444/Home/GetAllUser"];
+  [self synchronousUserFromWeb:@"http://192.168.1.218:4445/Home/GetAllUser"];
+  
+  [NSThread sleepForTimeInterval:5];
+}
+
+-(void) synchronousDataToWeb
+{
+  //NSString * mp = [[JSONAutoSerializer sharedSerializer] serializeObject:[RTGlobal getInstance].currentUser];
+  //NSLog(@"%@",mp);
 }
 
 -(void) synchronousUserFromWeb:(NSString *)url
@@ -34,26 +42,30 @@
   NSDictionary *jsonResult = [http getJSon:url];
   if(jsonResult)
   {
-  NSString *sqlTemp = @"REPLACE INTO User(UserId,Code,Password,Name,Email,Mobile) VALUES('%@','%@','%@','%@','%@','%@');";
-  
-  if([dbHelper OpenDB:dbName])
-  {
-    NSString *sql;
-    for (NSDictionary *userdic in jsonResult) {
-      sql = [NSString stringWithFormat:sqlTemp,[userdic objectForKey:@"UserId"],
-             [userdic objectForKey:@"Code"],
-             [userdic objectForKey:@"Password"],
-             [userdic objectForKey:@"Name"],
-             [userdic objectForKey:@"Email"],
-             [userdic objectForKey:@"Mobile"]
-             ];
-      NSLog(@"%@",sql);
-      
-      [dbHelper ExecuteNonQuery:sql];
+    NSMutableArray *users = [RTJSON deserializeJsonToObject:jsonResult ClassName:[UserModel class]];
+    for (UserModel *user in users)
+    {
+      NSLog(@"%@",user .Name);
     }
-    [dbHelper CloseDB];
-  }
-  //NSLog(@"%d",[jsonResult count]);
+//    NSString *sqlTemp = @"REPLACE INTO User(UserId,Code,Password,Name,Email,Mobile) VALUES('%@','%@','%@','%@','%@','%@');";
+//    
+//    if([dbHelper OpenDB:dbName])
+//    {
+//      NSString *sql;
+//      for (NSDictionary *userdic in jsonResult) {
+//        sql = [NSString stringWithFormat:sqlTemp,[userdic objectForKey:@"UserId"],
+//               [userdic objectForKey:@"Code"],
+//               [userdic objectForKey:@"Password"],
+//               [userdic objectForKey:@"Name"],
+//               [userdic objectForKey:@"Email"],
+//               [userdic objectForKey:@"Mobile"]
+//               ];
+//        NSLog(@"%@",sql);
+//        
+//        [dbHelper ExecuteNonQuery:sql];
+//      }
+//      [dbHelper CloseDB];
+//    }
   }
 }
 @end

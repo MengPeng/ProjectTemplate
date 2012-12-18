@@ -60,10 +60,12 @@
   {
     if(successBlock!=nil)
     {
-      //UserCode=txtLoginName.text;
       UserService *userService = [[UserService alloc] init];
       [RTGlobal getInstance].currentUser = [userService getUser:txtLoginName.text];
       successBlock();
+      
+      //NSString * mp = [[JSONAutoSerializer sharedSerializer] serializeObject:[RTGlobal getInstance].currentUser];
+      //NSLog(@"%@",mp);
     }
   }
   else

@@ -17,7 +17,7 @@
   UserModel *model;
   while (sqlite3_step(statement)==SQLITE_ROW) {
     model=[[UserModel alloc]init];
-     model.userid = [[NSString alloc] initWithCString:(char *)sqlite3_column_text(statement, 0) encoding:NSUTF8StringEncoding];
+     model.UserId = [[NSString alloc] initWithCString:(char *)sqlite3_column_text(statement, 0) encoding:NSUTF8StringEncoding];
     model.code = [[NSString alloc] initWithCString:(char *)sqlite3_column_text(statement, 1) encoding:NSUTF8StringEncoding];
     model.password = [[NSString alloc] initWithCString:(char *)sqlite3_column_text(statement, 2) encoding:NSUTF8StringEncoding];
     model.name = [[NSString alloc] initWithCString:(char *)sqlite3_column_text(statement, 3) encoding:NSUTF8StringEncoding];
@@ -37,7 +37,7 @@
 UserModel *model;
   while (sqlite3_step(statement)==SQLITE_ROW) {
     model=[[UserModel alloc]init];
-    model.userid = [[NSString alloc] initWithCString:(char *)sqlite3_column_text(statement, 0) encoding:NSUTF8StringEncoding];
+    model.UserId = [[NSString alloc] initWithCString:(char *)sqlite3_column_text(statement, 0) encoding:NSUTF8StringEncoding];
     model.code = [[NSString alloc] initWithCString:(char *)sqlite3_column_text(statement, 1) encoding:NSUTF8StringEncoding];
     model.password = [[NSString alloc] initWithCString:(char *)sqlite3_column_text(statement, 2) encoding:NSUTF8StringEncoding];
     model.name = [[NSString alloc] initWithCString:(char *)sqlite3_column_text(statement, 3) encoding:NSUTF8StringEncoding];
@@ -50,21 +50,24 @@ UserModel *model;
 }
 -(int)updateUser : (UserModel *)model{
   [databaseHelper OpenDB:dbName];
-  NSString * sql = [[NSString alloc] initWithFormat:@"UPDATE User set code = %@,password = %@,name = %@,email = %@,mobile = %@ WHERE userid = %@",model.code,model.password,model.name,model.email,model.mobile,model.userid];
+  NSString * sql = [[NSString alloc] initWithFormat:@"UPDATE User set code = %@,password = %@,name = %@,email = %@,mobile = %@ WHERE userid = %@",model.Code,model.Password,model.Name,model.Email,model.Mobile,model.UserId];
   [databaseHelper ExecuteNonQuery:sql];
   [databaseHelper CloseDB];
+  return 0;
 }
 -(int)deleteUser : (NSString *)muserid{
   [databaseHelper OpenDB:dbName];
   NSString * sql = [[NSString alloc] initWithFormat:@"DELETE FROM User where userid=%@",muserid];
   [databaseHelper ExecuteNonQuery:sql];
   [databaseHelper CloseDB];
+  return 0;
 }
 -(int)insertUser : (UserModel *)model{
   [databaseHelper OpenDB:dbName];
   NSString * sql = [[NSString alloc] initWithFormat:@"insert into User (userid,code,password,name,email,mobile) values (UserModel.userid,UserModel.code,UserModel.password,UserModel.name,UserModel.email,UserModel.mobile)"];
   [databaseHelper ExecuteNonQuery:sql];
   [databaseHelper CloseDB];
+  return 0;
 }
 
 @end

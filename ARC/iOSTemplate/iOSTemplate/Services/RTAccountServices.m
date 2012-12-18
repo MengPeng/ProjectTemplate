@@ -18,7 +18,7 @@
   um.password = @"123";
   
   //这里加入访问USER表的代码，用来验证用户名口令
-  return [um.code isEqualToString:userCode] && [um.password isEqualToString:password];
+  return [um.Code isEqualToString:userCode] && [um.Password isEqualToString:password];
 }
 
 @end

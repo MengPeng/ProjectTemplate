@@ -1,16 +1,16 @@
 #import <Foundation/Foundation.h>
 @interface UserModel : NSObject{
-  NSString * userid;
-  NSString * code;
-  NSString * password;
-  NSString * name;
-  NSString * email;
-  NSString * mobile;
+//  NSString * UserId;
+//  NSString * code;
+//  NSString * password;
+//  NSString * name;
+//  NSString * email;
+//  NSString * mobile;
 }
-@property(nonatomic,retain) NSString * userid;
-@property(nonatomic,retain) NSString * code;
-@property(nonatomic,retain) NSString * password;
-@property(nonatomic,retain) NSString * name;
-@property(nonatomic,retain) NSString * email;
-@property(nonatomic,retain) NSString * mobile;
+@property(nonatomic,retain) NSString * UserId;
+@property(nonatomic,retain) NSString * Code;
+@property(nonatomic,retain) NSString * Password;
+@property(nonatomic,retain) NSString * Name;
+@property(nonatomic,retain) NSString * Email;
+@property(nonatomic,retain) NSString * Mobile;
 @end

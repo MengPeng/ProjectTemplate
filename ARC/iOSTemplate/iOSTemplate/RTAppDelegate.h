@@ -10,13 +10,14 @@
 #import "RTLoginViewController.h"
 #import "RTSynchronousService.h"
 #import "RTSettings.h"
+#import "RTWaitingViewController.h"
+#import "RTViewController.h"
 
 @class RTViewController;
 
 @interface RTAppDelegate : UIResponder <UIApplicationDelegate>
 {
-  NSString * UserCode;
-  NSString * UserName;
+
 }
 
 @property (strong, nonatomic) UIWindow *window;

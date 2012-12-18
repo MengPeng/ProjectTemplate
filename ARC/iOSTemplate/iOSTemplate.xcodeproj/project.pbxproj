@@ -40,6 +40,10 @@
 		05A3AE101678779800ABA5F2 /* RTViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05A3AE0E1678779800ABA5F2 /* RTViewController_iPhone.xib */; };
 		05A3AE131678779800ABA5F2 /* RTViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05A3AE111678779800ABA5F2 /* RTViewController_iPad.xib */; };
 		05A3AE1F16787B6500ABA5F2 /* rt.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 05A3AE1E16787B6400ABA5F2 /* rt.sqlite */; };
+		05AD8E6C167ECB5F004D3B92 /* RTJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AD8E6B167ECB5F004D3B92 /* RTJSON.m */; };
+		05D204B716804C8A00C9EA21 /* RTWaitingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D204B516804C8A00C9EA21 /* RTWaitingViewController.m */; };
+		05D204B816804C8A00C9EA21 /* RTWaitingView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05D204B616804C8A00C9EA21 /* RTWaitingView_iPhone.xib */; };
+		05D204BA16804CB400C9EA21 /* RTWaitingView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05D204B916804CB300C9EA21 /* RTWaitingView_iPad.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +99,12 @@
 		05A3AE0F1678779800ABA5F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RTViewController_iPhone.xib; sourceTree = "<group>"; };
 		05A3AE121678779800ABA5F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RTViewController_iPad.xib; sourceTree = "<group>"; };
 		05A3AE1E16787B6400ABA5F2 /* rt.sqlite */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rt.sqlite; sourceTree = "<group>"; };
+		05AD8E6A167ECB5F004D3B92 /* RTJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTJSON.h; sourceTree = "<group>"; };
+		05AD8E6B167ECB5F004D3B92 /* RTJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTJSON.m; sourceTree = "<group>"; };
+		05D204B416804C8A00C9EA21 /* RTWaitingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTWaitingViewController.h; path = Views/RTWaitingViewController.h; sourceTree = "<group>"; };
+		05D204B516804C8A00C9EA21 /* RTWaitingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTWaitingViewController.m; path = Views/RTWaitingViewController.m; sourceTree = "<group>"; };
+		05D204B616804C8A00C9EA21 /* RTWaitingView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RTWaitingView_iPhone.xib; path = Views/RTWaitingView_iPhone.xib; sourceTree = "<group>"; };
+		05D204B916804CB300C9EA21 /* RTWaitingView_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RTWaitingView_iPad.xib; path = Views/RTWaitingView_iPad.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +138,7 @@
 		05606DF7167CA5FE0034AAAD /* CoreCode */ = {
 			isa = PBXGroup;
 			children = (
+				05AD8E69167ECB5F004D3B92 /* JSon */,
 				05606DF8167CA5FE0034AAAD /* Configuration */,
 				05606DFB167CA5FE0034AAAD /* DataBase */,
 				05606DFE167CA5FE0034AAAD /* Net */,
@@ -260,6 +271,10 @@
 			isa = PBXGroup;
 			children = (
 				05A3AE1C1678785800ABA5F2 /* Account */,
+				05D204B416804C8A00C9EA21 /* RTWaitingViewController.h */,
+				05D204B516804C8A00C9EA21 /* RTWaitingViewController.m */,
+				05D204B616804C8A00C9EA21 /* RTWaitingView_iPhone.xib */,
+				05D204B916804CB300C9EA21 /* RTWaitingView_iPad.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -283,6 +298,15 @@
 				05A3AE1E16787B6400ABA5F2 /* rt.sqlite */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		05AD8E69167ECB5F004D3B92 /* JSon */ = {
+			isa = PBXGroup;
+			children = (
+				05AD8E6A167ECB5F004D3B92 /* RTJSON.h */,
+				05AD8E6B167ECB5F004D3B92 /* RTJSON.m */,
+			);
+			path = JSon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +371,8 @@
 				058F8106167978DF000774A7 /* RTLoginView_iPad.xib in Resources */,
 				058F8108167978FE000774A7 /* RTLoginView_iPhone.xib in Resources */,
 				054B9B3A167DAE190039F09C /* Settings.plist in Resources */,
+				05D204B816804C8A00C9EA21 /* RTWaitingView_iPhone.xib in Resources */,
+				05D204BA16804CB400C9EA21 /* RTWaitingView_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +400,8 @@
 				054B9B3E167DAE690039F09C /* RTSettings.m in Sources */,
 				054B9B4F167DD0620039F09C /* UserService.m in Sources */,
 				054B9B5E167DE23A0039F09C /* RTGlobal.m in Sources */,
+				05AD8E6C167ECB5F004D3B92 /* RTJSON.m in Sources */,
+				05D204B716804C8A00C9EA21 /* RTWaitingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

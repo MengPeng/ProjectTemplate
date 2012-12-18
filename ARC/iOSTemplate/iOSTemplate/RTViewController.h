@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "RTAccountServices.h"
 #import "RTLoginViewController.h"
+#import "RTWaitingViewController.h"
+#import "RTSynchronousService.h"
 
 @interface RTViewController : UIViewController
 

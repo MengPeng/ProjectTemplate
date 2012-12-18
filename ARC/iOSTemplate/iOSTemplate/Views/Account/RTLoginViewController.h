@@ -11,6 +11,7 @@
 #import "RTPopLoginView.h"
 #import "RTGlobal.h"
 #import "UserService.h"
+#import "RTJSON.h"
 
 typedef void(^Block)(void);
 

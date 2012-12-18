@@ -1,9 +1,9 @@
 #import "UserModel.h"
 @implementation UserModel
-@synthesize userid;
-@synthesize code;
-@synthesize password;
-@synthesize name;
-@synthesize email;
-@synthesize mobile;
+@synthesize UserId;
+@synthesize Code;
+@synthesize Password;
+@synthesize Name;
+@synthesize Email;
+@synthesize Mobile;
 @end

@@ -19,37 +19,35 @@
   
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   // Override point for customization after application launch.
-  self.navController = [[UINavigationController alloc] init];
-  self.navController.navigationBar.hidden=YES;
   
   RTSettings *settings = [[RTSettings alloc] init:@"Settings"];
   
+  self.navController = [[UINavigationController alloc] init];
+  self.navController.navigationBar.hidden=YES;
   //
   if(settings.isLoginFirst)
   {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
       
       self.viewController = [[RTLoginViewController alloc] initWithNibName:@"RTLoginView_iPhone" bundle:nil
-        Success:^{
-          [self afterAuthenticationSuccess];
-          NSLog(@"%@",[RTGlobal getInstance].currentUser.name);
-        }
-        Fail:^{
-          NSLog(@"Login Fail");
-        }];
-      [self.navController pushViewController:self.viewController animated:YES];
-    } else {
+                                                                   Success:^{
+                                                                     [self afterAuthenticationSuccess];
+                                                                   }
+                                                                      Fail:^{
+                                                                        NSLog(@"Login Fail");
+                                                                      }];
+      [self.navController pushViewController:self.viewController animated:NO];
       
+    } else {
       self.viewController = [[RTLoginViewController alloc] initWithNibName:@"RTLoginView_iPad" bundle:nil];
-      //self.viewController.loginDelegate=self;
-      [self.navController popToViewController:self.viewController animated:YES];
+      [self.navController pushViewController:self.viewController animated:NO];
     }
   }
   else
   {
     [self afterAuthenticationSuccess];
   }
-  self.window.rootViewController = self.navController;
+  self.window.rootViewController = _navController;
   [self.window makeKeyAndVisible];
   return YES;
 }
@@ -81,14 +79,32 @@
   // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-#pragma mark -RTLoginViewDelegate
+
 -(void) afterAuthenticationSuccess
 {
   NSLog(@"Lgoin SUCCESS");
-  //同步数据
-  //Sync();
-  //RTSynchronousService *sync = [[RTSynchronousService alloc] initWithDatabaseName:@"rt.sqlite"];
-  //[sync synchronousData];
-  //进入业务第一屏
+  
+  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    //出现等待窗口
+    dispatch_sync(dispatch_get_main_queue(), ^{
+      RTWaitingViewController *waiting  = [RTWaitingViewController ShowWaiting];
+      //[RTWaitingViewController ShowWaiting];
+      [self.viewController.navigationController pushViewController:waiting animated:NO];
+    });
+    dispatch_sync(dispatch_get_main_queue(), ^{
+      //同步数据
+      RTSynchronousService *sync = [[RTSynchronousService alloc] initWithDatabaseName:@"rt.sqlite"];
+      [sync synchronousDataFromWeb];
+      
+    });
+    dispatch_sync(dispatch_get_main_queue(), ^{
+      //同步结束后续工作
+      [self.navController popViewControllerAnimated:NO];
+      RTViewController *view = [[RTViewController alloc] initWithNibName:@"RTViewController_iPhone" bundle:nil];
+      [self.navController pushViewController:view animated:NO];
+      NSLog(@"进入业务第一屏%d",self.navController.childViewControllers.count);
+      //进入业务第一屏
+    });
+  });
 }
 @end

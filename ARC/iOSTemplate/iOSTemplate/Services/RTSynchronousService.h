@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "HttpHelper.h"
 #import "DatabaseHelper.h"
+#import "RTJSON.h"
+#import "UserModel.h"
 
 @interface RTSynchronousService : NSObject
 {
@@ -16,7 +18,8 @@
   DatabaseHelper *dbHelper;
 }
 -(id)initWithDatabaseName:(NSString *) databaseName;
--(void) synchronousData;
+-(void) synchronousDataFromWeb;
+-(void) synchronousDataToWeb;
 //-(void) synchronousUserFromWeb:(NSString *)url;
 
 @end
