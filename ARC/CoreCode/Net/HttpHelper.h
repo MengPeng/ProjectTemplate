@@ -4,6 +4,8 @@
 
 }
 
--(NSDictionary *) getJSon:(NSString *)url;
+-(NSDictionary *) getJsonData:(NSString *)url;
+-(NSString *) getJsonString:(NSString *)url;
+-(NSString *) postJson:(NSString *)url JsonData:(NSData  *)jsonData;
 
 @end

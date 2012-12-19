@@ -20,7 +20,7 @@
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   // Override point for customization after application launch.
   
-  RTSettings *settings = [[RTSettings alloc] init:@"Settings"];
+  RTSettings *settings = [[RTSettings alloc] init:nil WorkInDocument:YES];
   
   self.navController = [[UINavigationController alloc] init];
   self.navController.navigationBar.hidden=YES;
@@ -29,13 +29,15 @@
   {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
       
-      self.viewController = [[RTLoginViewController alloc] initWithNibName:@"RTLoginView_iPhone" bundle:nil
-                                                                   Success:^{
-                                                                     [self afterAuthenticationSuccess];
-                                                                   }
-                                                                      Fail:^{
-                                                                        NSLog(@"Login Fail");
-                                                                      }];
+      self.viewController = [[RTLoginViewController alloc] initWithNibName:@"RTLoginView_iPhone"
+        bundle:nil
+        Success:^{
+                  [self afterAuthenticationSuccess];
+                }
+        Fail:^{
+                NSLog(@"Login Fail");
+              }];
+      
       [self.navController pushViewController:self.viewController animated:NO];
       
     } else {

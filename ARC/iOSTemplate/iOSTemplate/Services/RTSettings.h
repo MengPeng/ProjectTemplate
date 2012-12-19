@@ -17,7 +17,7 @@
 @property (nonatomic) BOOL isLoginFirst;
 @property (retain, nonatomic) NSString * databaseName;
 
--(id) init:(NSString *)fileName;
+-(id) init:(NSString *)fileName WorkInDocument:(BOOL)workInDocument;
 
 
 @end

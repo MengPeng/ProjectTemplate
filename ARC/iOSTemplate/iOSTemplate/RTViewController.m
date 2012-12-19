@@ -27,5 +27,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnGetUser:(id)sender {
+  HttpHelper *http = [[HttpHelper alloc] init];
+  NSString * jsonStr =[NSString stringWithFormat:@"json=%@",[http getJsonString:@"http://192.168.1.67:34062/Home/GetAllUser"]];
+  
+  //NSData * jsonData = [NSJSONSerialization dataWithJSONObject:jsonDic options:NSJSONReadingMutableLeaves error:nil];
+  NSData *jsonData = [jsonStr dataUsingEncoding:NSUTF8StringEncoding];
+  
+  [http postJson:@"http://192.168.1.67:34062/Home/SetUser" JsonData:jsonData];
+  
+  
+  
+}
+- (IBAction)btnSetUser:(id)sender {
+}
 
 @end

@@ -26,7 +26,6 @@
   //自行添加需要同步的函数
   [self synchronousUserFromWeb:@"http://192.168.1.218:4445/Home/GetAllUser"];
   
-  [NSThread sleepForTimeInterval:5];
 }
 
 -(void) synchronousDataToWeb
@@ -39,7 +38,7 @@
 {
   
   HttpHelper *http = [[HttpHelper alloc] init];
-  NSDictionary *jsonResult = [http getJSon:url];
+  NSDictionary *jsonResult = [http getJsonData:url];
   if(jsonResult)
   {
     NSMutableArray *users = [RTJSON deserializeJsonToObject:jsonResult ClassName:[UserModel class]];

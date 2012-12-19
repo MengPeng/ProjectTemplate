@@ -12,20 +12,39 @@
 {
   NSString * plistName;
   NSString * plistFullName;
+  BOOL isWorkInDocument;
 }
 
--(id) init:(NSString *)fileName;
+-(id) init:(NSString *)fileName WorkInDocument:(BOOL)workInDocument
 {
   self = [super init];
   if(self)
   {
-    plistName = fileName;
-    
+    if(fileName)
+    {
+      plistName = fileName;
+    }
+    else
+    {
+      plistName = @"Settings";
+    }
+    isWorkInDocument = workInDocument;
     //默认从resources目录里取
-    plistFullName= [[NSBundle mainBundle] pathForResource:fileName ofType:@"plist"];
+    if(!isWorkInDocument)
+    {
+      plistFullName= [[NSBundle mainBundle] pathForResource:plistName ofType:@"plist"];
+    }
+    else
+    {
+      NSArray *doc = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+      
+      plistFullName = [[ doc objectAtIndex:0 ]stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.plist",plistName]]; // 字典集合。
+      [self copyPlistFileToDocuments];
+    }
   }
   return self;
 }
+
 
 -(BOOL) isLoginFirst
 {
@@ -42,16 +61,12 @@
 {
   NSArray *paths = NSSearchPathForDirectoriesInDomains( NSDocumentDirectory,NSUserDomainMask, YES);
   NSString *documentsDirectory = [paths objectAtIndex:0];
-  NSString *documentLibraryFolderPath = [documentsDirectory stringByAppendingPathComponent:plistName];
+  NSString *documentLibraryFolderPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.plist",plistName]];
   
   plistFullName = documentLibraryFolderPath;
   
-  if ([[NSFileManager defaultManager] fileExistsAtPath:documentLibraryFolderPath]) {
-    
-    //NSLog(@"文件已经存在了");
-  }else {
-    //    NSString *plistPath = [[NSBundle mainBundle] pathForResource:fullPathToFile ofType:@"plist"];
-    
+  if (![[NSFileManager defaultManager] fileExistsAtPath:documentLibraryFolderPath])
+  {
     NSString *resourceSampleImagesFolderPath =[[NSBundle mainBundle] pathForResource:plistName ofType:@"plist"];
     NSData *mainBundleFile = [NSData dataWithContentsOfFile:resourceSampleImagesFolderPath];
     [[NSFileManager defaultManager] createFileAtPath:documentLibraryFolderPath contents:mainBundleFile attributes:nil];

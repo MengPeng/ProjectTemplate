@@ -11,6 +11,8 @@
 #import "RTLoginViewController.h"
 #import "RTWaitingViewController.h"
 #import "RTSynchronousService.h"
+#import "UserModel.h"
+#import "RTJSON.h"
 
 @interface RTViewController : UIViewController
 
