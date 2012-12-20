@@ -20,7 +20,7 @@
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   // Override point for customization after application launch.
   
-  RTSettings *settings = [[RTSettings alloc] init:nil WorkInDocument:YES];
+  RTSettings *settings = [[RTSettings alloc] init:nil WorkInDocument:NO];
   
   self.navController = [[UINavigationController alloc] init];
   self.navController.navigationBar.hidden=YES;
@@ -89,9 +89,10 @@
   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
     //出现等待窗口
     dispatch_sync(dispatch_get_main_queue(), ^{
-      RTWaitingViewController *waiting  = [RTWaitingViewController ShowWaiting];
+  //    RTWaitingViewController *waiting  = [RTWaitingViewController ShowWaiting];
       //[RTWaitingViewController ShowWaiting];
-      [self.viewController.navigationController pushViewController:waiting animated:NO];
+//      [self.viewController.navigationController pushViewController:waiting animated:NO];
+      [RTBezelActivityIndicatorView activityViewForView:self.viewController.view  withLabel:@"正在处理数据，请稍后！"];
     });
     dispatch_sync(dispatch_get_main_queue(), ^{
       //同步数据
@@ -101,9 +102,12 @@
     });
     dispatch_sync(dispatch_get_main_queue(), ^{
       //同步结束后续工作
-      [self.navController popViewControllerAnimated:NO];
+      //[self.navController popViewControllerAnimated:NO];
+      [RTBezelActivityIndicatorView removeViewAnimated:YES];
       RTViewController *view = [[RTViewController alloc] initWithNibName:@"RTViewController_iPhone" bundle:nil];
+      
       [self.navController pushViewController:view animated:NO];
+      
       NSLog(@"进入业务第一屏%d",self.navController.childViewControllers.count);
       //进入业务第一屏
     });

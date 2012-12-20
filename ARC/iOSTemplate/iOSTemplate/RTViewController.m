@@ -35,11 +35,24 @@
   NSData *jsonData = [jsonStr dataUsingEncoding:NSUTF8StringEncoding];
   
   [http postJson:@"http://192.168.1.67:34062/Home/SetUser" JsonData:jsonData];
-  
-  
-  
 }
 - (IBAction)btnSetUser:(id)sender {
+  
+  HttpHelper *http = [[HttpHelper alloc] init];
+  NSDictionary * jsonDic =[http getJsonData:@"http://192.168.1.67:34062/Home/GetAllUser"];
+  
+  NSMutableArray * users =[RTJSON deserializeJsonToObject:jsonDic ClassName:[UserModel class]];
+
+    UserService *uService = [[UserService alloc] init];
+  
+  for(UserModel *u in users)
+  {
+    u.Name = [u.Name stringByAppendingString:@"CC"];
+    [uService updateUser:u];
+  }
+  
+
+  
 }
 
 @end

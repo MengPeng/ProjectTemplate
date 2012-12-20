@@ -1,8 +1,8 @@
 #import <Foundation/Foundation.h> 
- @interface roleModel : NSObject{ 
-NSString * roleid;
-NSString * name;
+ @interface RoleModel : NSObject{ 
+NSString * RoleId;
+NSString * Name;
  } 
-@property(nonatomic,retain) NSString * roleid;
-@property(nonatomic,retain) NSString * name;
+@property(nonatomic,retain) NSString * RoleId;
+@property(nonatomic,retain) NSString * Name;
 @end

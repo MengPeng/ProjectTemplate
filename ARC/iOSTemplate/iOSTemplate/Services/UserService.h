@@ -6,9 +6,10 @@
   DatabaseHelper *databaseHelper;
   NSString * dbName;
 }
--(NSMutableArray *)getUser; 
+-(NSMutableArray *)getUsers;
 -(UserModel *)getUser:(NSString *)userId;
 -(int)updateUser : (UserModel *)model;
--(int)deleteUser : (NSString *)muserid;
+-(int)deleteUser : (NSString *)userId;
 -(int)insertUser : (UserModel *)model;
+-(int)replaceUser: (UserModel *)model;
 @end

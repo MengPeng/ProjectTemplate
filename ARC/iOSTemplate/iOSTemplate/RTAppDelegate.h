@@ -10,7 +10,7 @@
 #import "RTLoginViewController.h"
 #import "RTSynchronousService.h"
 #import "RTSettings.h"
-#import "RTWaitingViewController.h"
+#import "RTActivityIndicatorView.h"
 #import "RTViewController.h"
 
 @class RTViewController;

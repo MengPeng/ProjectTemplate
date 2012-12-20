@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RTAccountServices.h"
 #import "RTLoginViewController.h"
-#import "RTWaitingViewController.h"
+#import "RTActivityIndicatorView.h"
 #import "RTSynchronousService.h"
 #import "UserModel.h"
 #import "RTJSON.h"

@@ -1,5 +1,5 @@
-#import "roleModel.h"
-@implementation roleModel 
-@synthesize roleid; 
-@synthesize name; 
+#import "RoleModel.h"
+@implementation RoleModel 
+@synthesize RoleId; 
+@synthesize Name; 
 @end

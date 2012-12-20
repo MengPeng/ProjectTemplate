@@ -12,17 +12,17 @@
 //DatabaseOperation
 @interface DatabaseHelper : NSObject
 {
-    sqlite3_stmt *statement;
-    sqlite3 *database;
+  sqlite3_stmt *statement;
+  sqlite3 *database;
 }
 
--(int)OpenDB:(NSString*)dbName;
--(sqlite3_stmt *)ExecSql:(NSString *)sql;
--(void) ExecuteNonQuery:(NSString *)sql;
--(void)Setp;
--(void) BeginTransaction;
--(int) Commit;
--(void)Final;
--(void)CloseDB;
+-(int)openDB:(NSString*)dbName;
+-(sqlite3_stmt *)execSql:(NSString *)sql;
+-(int) executeNonQuery:(NSString *)sql;
+-(void)step;
+-(void) beginTransaction;
+-(int) commit;
+-(void) final;
+-(void) closeDB;
 
 @end
