@@ -13,6 +13,8 @@
 #import "RTSynchronousService.h"
 #import "UserModel.h"
 #import "RTJSON.h"
+#import "RTModel.h"
+#import "NSString+JSONString.h"
 
 @interface RTViewController : UIViewController
 

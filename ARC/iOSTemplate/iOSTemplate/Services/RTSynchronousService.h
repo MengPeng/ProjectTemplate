@@ -11,6 +11,8 @@
 #import "DatabaseHelper.h"
 #import "RTJSON.h"
 #import "UserModel.h"
+#import "RTModel.h"
+#import "NSArray+JSONArray.h"
 
 @interface RTSynchronousService : NSObject
 {

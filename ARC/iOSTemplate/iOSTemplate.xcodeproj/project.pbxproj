@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05000FEF1687EBFD005814F0 /* NSString+JSONString.m in Sources */ = {isa = PBXBuildFile; fileRef = 05000FEE1687EBFD005814F0 /* NSString+JSONString.m */; };
+		05001007168827C3005814F0 /* RTModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05001006168827C3005814F0 /* RTModel.m */; };
+		0500100E1688351E005814F0 /* NSArray+JSONArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 0500100D1688351E005814F0 /* NSArray+JSONArray.m */; };
 		050931971682D440002165B5 /* RTActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050931961682D440002165B5 /* RTActivityIndicatorView.m */; };
 		0523F863167AD02D001D83AB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0523F862167AD02D001D83AB /* CFNetwork.framework */; };
 		0523F869167AD0AE001D83AB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0523F868167AD0AE001D83AB /* SystemConfiguration.framework */; };
@@ -43,6 +46,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05000FED1687EBFD005814F0 /* NSString+JSONString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JSONString.h"; sourceTree = "<group>"; };
+		05000FEE1687EBFD005814F0 /* NSString+JSONString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JSONString.m"; sourceTree = "<group>"; };
+		05001005168827C3005814F0 /* RTModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTModel.h; sourceTree = "<group>"; };
+		05001006168827C3005814F0 /* RTModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTModel.m; sourceTree = "<group>"; };
+		0500100C1688351E005814F0 /* NSArray+JSONArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JSONArray.h"; sourceTree = "<group>"; };
+		0500100D1688351E005814F0 /* NSArray+JSONArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JSONArray.m"; sourceTree = "<group>"; };
 		050931951682D440002165B5 /* RTActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTActivityIndicatorView.h; sourceTree = "<group>"; };
 		050931961682D440002165B5 /* RTActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTActivityIndicatorView.m; sourceTree = "<group>"; };
 		0523F862167AD02D001D83AB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -114,6 +123,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05001004168827C3005814F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				05001005168827C3005814F0 /* RTModel.h */,
+				05001006168827C3005814F0 /* RTModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		050931941682D440002165B5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +155,7 @@
 		05606DF7167CA5FE0034AAAD /* CoreCode */ = {
 			isa = PBXGroup;
 			children = (
+				05001004168827C3005814F0 /* Model */,
 				050931941682D440002165B5 /* Views */,
 				05AD8E69167ECB5F004D3B92 /* JSon */,
 				05606DF8167CA5FE0034AAAD /* Configuration */,
@@ -297,6 +316,10 @@
 			children = (
 				05AD8E6A167ECB5F004D3B92 /* RTJSON.h */,
 				05AD8E6B167ECB5F004D3B92 /* RTJSON.m */,
+				05000FED1687EBFD005814F0 /* NSString+JSONString.h */,
+				05000FEE1687EBFD005814F0 /* NSString+JSONString.m */,
+				0500100C1688351E005814F0 /* NSArray+JSONArray.h */,
+				0500100D1688351E005814F0 /* NSArray+JSONArray.m */,
 			);
 			path = JSon;
 			sourceTree = "<group>";
@@ -390,6 +413,9 @@
 				054B9B5E167DE23A0039F09C /* RTGlobal.m in Sources */,
 				05AD8E6C167ECB5F004D3B92 /* RTJSON.m in Sources */,
 				050931971682D440002165B5 /* RTActivityIndicatorView.m in Sources */,
+				05000FEF1687EBFD005814F0 /* NSString+JSONString.m in Sources */,
+				05001007168827C3005814F0 /* RTModel.m in Sources */,
+				0500100E1688351E005814F0 /* NSArray+JSONArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

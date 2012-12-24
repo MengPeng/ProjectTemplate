@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h> 
- @interface UserModel : NSObject{ 
+#import "RTModel.h"
+
+ @interface UserModel : RTModel{
 
  } 
 @property(nonatomic,retain) NSString * UserId;

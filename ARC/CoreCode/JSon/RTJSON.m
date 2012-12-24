@@ -116,37 +116,4 @@
   return ret;
 }
 
-//+ (RTJSON *)sharedSerializer
-//{
-//  if (_sharedSerializer == nil)
-//  {
-//    
-//    _sharedSerializer = [[RTJSON alloc] init];
-//    
-//  }
-//  
-//  
-//  return _sharedSerializer;
-//}
-
-//- (id)init
-//{
-//  self = [super init];
-//  
-//  if (self)
-//  {
-//    
-//    
-//    
-//  }
-//  
-//  return self;
-//}
-
-//- (void)dealloc
-//{
-//[super dealloc];
-
-//}
-
 @end
